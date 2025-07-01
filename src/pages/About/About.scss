@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: 1;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 $spacing-md $spacing-lg;
+    width: 100%;
+
+    @include mobile {
+      padding: 0 $spacing-sm $spacing-md;
+    }
+  }
+
+  &__content {
+    max-width: 1023px;
+    margin: 0 auto;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.collapse {
+  margin-bottom: $spacing-md;
+
+  &__header {
+    width: 100%;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: $border-radius;
+    padding: $spacing-sm $spacing-md;
+    @include flex-between;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: $font-family;
+
+    @include mobile {
+      font-size: 13px;
+      padding: $spacing-xs $spacing-sm;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+
+    @include mobile {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__content {
+    background-color: $secondary-color;
+    border-radius: 0 0 $border-radius $border-radius;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+
+    &--open {
+      max-height: 500px;
+    }
+  }
+
+  &__content-wrapper {
+    padding: $spacing-lg $spacing-md;
+    color: $primary-color;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+
+    @include mobile {
+      font-size: 12px;
+      padding: $spacing-md $spacing-sm;
+    }
+
+    ul {
+      list-style: none;
+      
+      li {
+        margin-bottom: $spacing-xs;
+      }
+    }
+  }
+}

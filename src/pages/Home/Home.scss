@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: 1;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 $spacing-md $spacing-lg;
+    width: 100%;
+
+    @include mobile {
+      padding: 0 $spacing-sm $spacing-md;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-xl;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    padding: $spacing-xl;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-md;
+      padding: $spacing-md;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+}
