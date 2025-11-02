@@ -17,7 +17,7 @@ const Collapse = ({ title, children }) => {
       >
         <span className="collapse__title">{title}</span>
         <img 
-          src={isOpen ? "/arrow_up.png" : "/arrow_down.png"}
+          src={isOpen ? `${import.meta.env.BASE_URL}arrow_up.png` : `${import.meta.env.BASE_URL}arrow_down.png`}
           alt={isOpen ? "Fermer" : "Ouvrir"}
           className="collapse__arrow"
         />

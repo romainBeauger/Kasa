@@ -29,7 +29,7 @@ const About = () => {
       <Header />
       <main className="about__main">
         <Banner 
-          image="/banner-about.jpg" 
+          image={`${import.meta.env.BASE_URL}banner-about.jpg`} 
           overlay={true}
         />
         <div className="about__content">
