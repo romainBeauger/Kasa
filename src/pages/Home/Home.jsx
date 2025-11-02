@@ -12,7 +12,7 @@ const Home = () => {
       <Header />
       <main className="home__main">
         <Banner 
-          image="/banner-home.jpg" 
+          image="banner-home.jpg" 
           text="Chez vous, partout et ailleurs"
         />
         <section className="home__gallery">
